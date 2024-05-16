@@ -36,7 +36,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
+    steps:              
+      - name: Azure Login
+        uses: Azure/login@v2.1.0
+            
       - uses: actions/checkout@v4
 
       - name: Set up Java version
